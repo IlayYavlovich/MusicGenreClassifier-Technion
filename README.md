@@ -68,9 +68,9 @@ In our project we aimed to develop a deep learning network that will classify so
 
 
 ## Downloading the data
-
-#Notice - The Dataset uses around 750GB
-
+```diff
+- Notice: The Dataset uses around 750GB
+```
 All audio is distributed in 320kbps MP3 format. The audio files are split into folders packed into TAR archives. The dataset is hosted [online at MTG UPF](https://essentia.upf.edu/documentation/datasets/mtg-jamendo/).
 
 The script to download and validate all files in the dataset. See its help message for more information:
