@@ -1,10 +1,22 @@
-# 046211-MusicGenreClassifier
-Music Genre Classifier Project for 046211 – Deep Learning course
+# Automatic Music Genre Classification
+<h1 align="center">
+  <br>
+Technion EE 046211 - Deep Learning
+  <br>
+  <img src="https://raw.githubusercontent.com/taldatech/ee046211-deep-learning/main/assets/nn_gumgum.gif" height="200">
+</h1>
+  <p align="center">
+    <a href="https://github.com/IlayYavlovich">Ilay Yavlovich</a> •
+    <a href="https://github.com/KarpAmit">Amit Karp</a>
+  </p>
+
+Our Project for the Technion's EE 046211 course "Deep Learning"
 
 Based on the work:
 
 Minz Won, Janne Spijkervet, Keunwoo Choi [Music Classification: Beyond Supervised Learning, Towards Real-world Applications](https://music-classification.github.io/tutorial/landing-page.html), 2021
-[Shallow Updates for Deep Reinforcement Learning](https://arxiv.org/abs/1705.07461)
+
+[LS-DDPG](https://github.com/IlayYavlovich/046211-MusicGenreClassifier.git) - https://github.com/IlayYavlovich/046211-MusicGenreClassifier.git
 
 - [pytorch-ls-dqn](#pytorch-ls-dqn)
   * [Background](#background)
@@ -18,13 +30,10 @@ Minz Won, Janne Spijkervet, Keunwoo Choi [Music Classification: Beyond Supervise
   * [References](#references)
 
 ## Background
-The idea of this algorithm is to combine between Deep RL (DRL) to Shallow RL (SRL), where in this case, we use Deep Q-Learning (DQN) as the DRL algorithm and
-Fitted Q-Iteration (FQI) as the SRL algorithm (which can be approximated using least-squares, full derivation is in the original paper).
-Every N_DRL (number of DQN backprop steps) we apply LS-UPDATE to the very last layer of the DQN, by using the complete Replay Buffer, a fetaure augmentation technique and
-Bayesian regularization (prevents overfitting, makes the LS matrix invertible) to solve the FQI equations.
-The assumptions are that the features extracted from the last layer form a rich representation, and that the large batch size used by the SRL algorithm improves stability and performance.
-In this work we added the derivations and approximations for Dueling DQN architecture and also added Boosted FQI as an optional SRL algorithm.
-For full derivations and theory, please refer to the original paper.
+The music industry has gone digital in the past decade, now in a click of a button every user holds huge music library to choose from. To keep us entertained and on their platform, they have developed an algorithm that suggest us new songs that they think that it matches our taste based on what we have already listened to.
+This algorithm is based on releases from the same artists and genre recognition.
+In our project we aimed to develop a deep learning network that will classify songs by the respective genre. There is some work that has been done on this subject. In the “Genre Classification Using Pytorch – Tutorial” by Minz Won, Janne Spijkervet and Keunwoo Choi they used the GTZAN dataset to classify the music genre. This dataset is relatively small (10 genres, 100 songs with a 30-second-long sample each). We wanted to use a bigger dataset with full songs and more genres, that is why we have chosen the MTG-Jamendo dataset which contains 55,525 tracks annotated by 87 genre tags.
+
 
 
 ## Prerequisites
