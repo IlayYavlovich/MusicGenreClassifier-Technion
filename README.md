@@ -18,15 +18,12 @@ Minz Won, Janne Spijkervet, Keunwoo Choi [Music Classification: Beyond Supervise
 
 [Automatic Music Genre Classification](https://github.com/IlayYavlovich/046211-MusicGenreClassifier.git) - https://github.com/IlayYavlovich/046211-MusicGenreClassifier.git
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!change at the end!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 - [pytorch-ls-dqn](#pytorch-ls-dqn)
   * [Background](#background)
   * [Prerequisites](#prerequisites)
   * [Files in the repository](#files-in-the-repository)
   * [Downloading the data](#Downloading-the-data)
-  * [Training](#training)
-  * [Playing Atari on Windows](#playing-atari-on-windows)
-  * [TensorBoard](#tensorboard)
+  * [Running the Network](#Running-the-Network)
   * [References](#references)
 
 ## Background
@@ -140,8 +137,8 @@ python Deep_Network.py -h
 ```
 
 ## References
-* [PyTorch Agent Net: reinforcement learning toolkit for pytorch](https://github.com/Shmuma/ptan) by [Max Lapan](https://github.com/Shmuma)
-* Nir Levine, Tom Zahavy, Daniel J. Mankowitz, Aviv Tamar, Shie Mannor [Shallow Updates for Deep Reinforcement Learning](https://arxiv.org/abs/1705.07461), NIPS 2017
+* MinzWon, Andres Ferraro, Dmitry Bogdanov and Xavier Serra. “Evaluation of CNN-based Automatic Music Tagging Models”, 2020
+* Khaled Koutin , Hamid Eghbal-zadeh and Gerhard Widmer. “Receptive Field Regularization Techniques for Audio Classification and Tagging with Deep Convolutional Neural Networks”, 2021
 
 
 
