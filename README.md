@@ -53,7 +53,6 @@ In our project we aimed to develop a deep learning network that will classify so
 |`Deep_Network.py`| code for the network|
 |`Stereo_to_mono_trans.py`| python code for transforming Stereo to Mono|
 |`best_model.ckpt`| example of a trained model|
-|`dqn_model.py`| DQN classes, neural networks structures|
 |`create_dataset_files.py`| python code for spltting data Train/Val/Test|
 |`download_MTG_Jamendo.py`| code to download the MTG-Jamendo Dataset|
 |`music_split.py`|python code for splitting the songs to chosen time samples|
