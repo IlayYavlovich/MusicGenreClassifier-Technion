@@ -18,12 +18,11 @@ Minz Won, Janne Spijkervet, Keunwoo Choi [Music Classification: Beyond Supervise
 
 [Automatic Music Genre Classification](https://github.com/IlayYavlovich/046211-MusicGenreClassifier.git) - https://github.com/IlayYavlovich/046211-MusicGenreClassifier.git
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!change at the end
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!change at the end!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 - [pytorch-ls-dqn](#pytorch-ls-dqn)
   * [Background](#background)
   * [Prerequisites](#prerequisites)
   * [Files in the repository](#files-in-the-repository)
-  * [API (`ls_dqn_main.py --help`)](#api---ls-dqn-mainpy---help--)
   * [Playing](#playing)
   * [Training](#training)
   * [Playing Atari on Windows](#playing-atari-on-windows)
@@ -40,12 +39,13 @@ In our project we aimed to develop a deep learning network that will classify so
 ## Prerequisites
 |Library         | Version |
 |----------------------|----|
-|`Python`|  `3.5.5 (Anaconda)`|
-|`torch`|  `0.4.1`|
-|`gym`|  `0.10.9`|
-|`tensorboard`|  `1.12.0`|
+|`Python`|  `3.10 (Anaconda)`|
+|`torch`|  `1.13`|
+|`torchaudio`|  `0.13`|
+|`scipy.io.wavfile`|  `1.12.0`|
 |`tensorboardX`|  `1.5`|
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!change at the end!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ## Files in the repository
 
@@ -66,36 +66,6 @@ In our project we aimed to develop a deep learning network that will classify so
 |`*.pth`| Checkpoint files for the Agents (playing/continual learning)|
 |`Deep_RL_Shallow_Updates_for_Deep_Reinforcement_Learning.pdf`| Writeup - theory and results|
 
-
-## API (`ls_dqn_main.py --help`)
-
-
-You should use the `ls_dqn_main.py` file with the following arguments:
-
-|Argument                 | Description                                 |
-|-------------------------|---------------------------------------------|
-|-h, --help       | shows arguments description             |
-|-t, --train     | train or continue training an agent  |
-|-p, --play    | play the environment using an a pretrained agent |
-|-n, --name       | model name, for saving and loading |
-|-k, --lsdqn	| use LS-DQN (apply LS-UPDATE every N_DRL), default: false |
-|-j, --boosting| use Boosted-FQI as SRL algorithm, default: false |
-|-u, --double| use double dqn, default: false|
-|-f, --dueling| use dueling dqn, default: false |
-|-y, --path| path to agent checkpoint, for playing |
-|-m, --cond_update| conditional ls-update: update only if ls weights are better, default: false |
-|-e, --env| environment to play: pong, boxing, breakout, breakout-small, invaders |
-|-d, --decay_rate| number of episodes for epsilon decaying, default: 100000 |
-|-o, --optimizer| optimizing algorithm ('RMSprop', 'Adam'), deafult: 'Adam' |
-|-r, --learn_rate| learning rate for the optimizer, default: 0.0001 |
-|-g, --gamma| gamma parameter for the Q-Learning, default: 0.99 |
-|-l, --lam| regularization parameter value, default: 1, 10000 (boosting) |
-|-s, --buffer_size| Replay Buffer size, default: 1000000 |
-|-b, --batch_size| number of samples in each batch, default: 128 |
-|-i, --steps_to_start_learn| number of steps before the agents starts learning, default: 10000 |
-|-c, --target_update_freq| number of steps between copying the weights to the target DQN, default: 10000 |
-|-x, --record| Directory to store video recording when playing (only Linux) |
-|--no-visualize| if not typed, render the environment when playing |
 
 ## Playing
 Agents checkpoints (files ending with `.pth`) are saved and loaded from the `agent_ckpt` directory.
