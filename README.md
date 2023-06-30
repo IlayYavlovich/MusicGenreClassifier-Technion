@@ -42,7 +42,6 @@ In our project we aimed to develop a deep learning network that will classify so
 |`scipy.io.wavfile`|  `1.12.0`|
 |`tensorboardX`|  `1.5`|
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!change at the end!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ## Files in the repository
 
@@ -59,7 +58,7 @@ In our project we aimed to develop a deep learning network that will classify so
 |`download_MTG_Jamendo.py`| code to download the MTG-Jamendo Dataset|
 |`music_split.py`|python code for splitting the songs to chosen time samples|
 
-
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!change at the end!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 |`utils.py`| utility functions|
 |`wrappers.py`| DeepMind's wrappers for the Atari environments|
