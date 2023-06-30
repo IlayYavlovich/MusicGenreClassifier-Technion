@@ -23,7 +23,7 @@ Minz Won, Janne Spijkervet, Keunwoo Choi [Music Classification: Beyond Supervise
   * [Background](#background)
   * [Prerequisites](#prerequisites)
   * [Files in the repository](#files-in-the-repository)
-  * [Playing](#playing)
+  * [Downloading the data](#Downloading-the-data)
   * [Training](#training)
   * [Playing Atari on Windows](#playing-atari-on-windows)
   * [TensorBoard](#tensorboard)
@@ -67,15 +67,62 @@ In our project we aimed to develop a deep learning network that will classify so
 |`Deep_RL_Shallow_Updates_for_Deep_Reinforcement_Learning.pdf`| Writeup - theory and results|
 
 
-## Playing
-Agents checkpoints (files ending with `.pth`) are saved and loaded from the `agent_ckpt` directory.
-Playing a pretrained agent for one episode:
+## Downloading the data
 
-`python ls_dqn_main.py --play -e pong -y ./agent_ckpt/pong_agent.pth`
+All audio is distributed in 320kbps MP3 format. We recommend using this version of audio by default. For smaller download sizes, we also provide a lower-bitrate mono version of the same audio (converted from the full quality version to mono LAME VBR 2 `lame -V 2`). In addition we provide precomputed mel-spectrograms which are distributed as NumPy Arrays in NPY format. We also provide precomputed statistical features from [Essentia](https://essentia.upf.edu) (used in the [AcousticBrainz](https://acousticbrainz.org) music database) in JSON format. The audio files and the NPY/JSON files are split into folders packed into TAR archives. The dataset is hosted [online at MTG UPF](https://essentia.upf.edu/documentation/datasets/mtg-jamendo/).
 
-If the checkpoint was trained using Dueling DQN:
+We provide the following data subsets:
+- `raw_30s/audio` - all available audio for `raw_30s.tsv` in full quality (508 GB)
+- `raw_30s/audio-low` - all available audio for `raw_30s.tsv` in low quality (156 GB)
+- `raw_30s/melspecs` - mel-spectrograms for `raw_30s.tsv` (229 GB)
+- `autotagging-moodtheme/audio` - audio for the mood/theme subset `autotagging_moodtheme.tsv` in full quality (152 GB)
+- `autotagging-moodtheme/audio-low` - audio for the mood/theme subset `autotagging_moodtheme.tsv` in low quality (46 GB)
+- `autotagging-moodtheme/melspecs` - mel-spectrograms for the `autotagging_moodtheme.tsv` subset (68 GB)
 
-`python ls_dqn_main.py --play -e pong -f -y ./agent_ckpt/pong_agent.pth`
+We provide a script to download and validate all files in the dataset. See its help message for more information:
+
+```bash
+python scripts/download/download.py -h
+```
+```
+usage: download.py [-h] [--dataset {raw_30s,autotagging_moodtheme}]
+                   [--type {audio,audio-low,melspecs,acousticbrainz}]
+                   [--from {mtg,mtg-fast}] [--unpack] [--remove]
+                   outputdir
+
+Download the MTG-Jamendo dataset
+
+positional arguments:
+  outputdir             directory to store the dataset
+
+options:
+  -h, --help            show this help message and exit
+  --dataset {raw_30s,autotagging_moodtheme}
+                        dataset to download (default: raw_30s)
+  --type {audio,audio-low,melspecs,acousticbrainz}
+                        type of data to download (audio, audio in low quality,
+                        mel-spectrograms, AcousticBrainz features) (default: audio)
+  --from {mtg,mtg-fast}
+                        download from MTG (server in Spain, slow),
+                        or fast MTG mirror (Finland) (default: mtg-fast)
+  --unpack              unpack tar archives (default: False)
+  --remove              remove tar archives while unpacking one by one (use to
+                        save disk space) (default: False)
+
+```
+
+For example, to download audio for the `autotagging_moodtheme.tsv` subset, unpack and validate all tar archives:
+
+```
+mkdir /path/to/download
+python3 scripts/download/download.py --dataset autotagging_moodtheme --type audio /path/to/download --unpack --remove
+```
+
+
+Unpacking process is run after tar archive downloads are complete and validated. In the case of download errors, re-run the script to download missing files.
+
+Due to the large size of the dataset, it can be useful to include the `--remove` flag to save disk space: in this case, tar archive are unpacked and immediately removed one by one.
+
 
 ## Training
 
