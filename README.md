@@ -3,10 +3,8 @@ Music Genre Classifier Project for 046211 – Deep Learning course
 
 Based on the work:
 
-Minz Won, Janne Spijkervet, Keunwoo Choi [Music Classification: Beyond Supervised Learning, Towards Real-world Applications]([https://arxiv.org/abs/1705.07461](https://music-classification.github.io/tutorial/landing-page.html), NIPS 2021
-
-
-[LS-DDPG](https://github.com/taldatech/pytorch-ls-ddpg) - https://github.com/taldatech/pytorch-ls-ddpg
+Minz Won, Janne Spijkervet, Keunwoo Choi [Music Classification: Beyond Supervised Learning, Towards Real-world Applications](https://music-classification.github.io/tutorial/landing-page.html), 2021
+[Shallow Updates for Deep Reinforcement Learning](https://arxiv.org/abs/1705.07461)
 
 - [pytorch-ls-dqn](#pytorch-ls-dqn)
   * [Background](#background)
