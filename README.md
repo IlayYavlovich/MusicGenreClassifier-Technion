@@ -6,10 +6,6 @@ Based on the work:
 Minz Won, Janne Spijkervet, Keunwoo Choi [Music Classification: Beyond Supervised Learning, Towards Real-world Applications]([https://arxiv.org/abs/1705.07461](https://music-classification.github.io/tutorial/landing-page.html), NIPS 2021
 
 
-
-![pong](https://github.com/taldatech/pytorch-ls-dqn/blob/master/images/pong.gif)
-![boxing](https://github.com/taldatech/pytorch-ls-dqn/blob/master/images/boxing.gif)
-
 [LS-DDPG](https://github.com/taldatech/pytorch-ls-ddpg) - https://github.com/taldatech/pytorch-ls-ddpg
 
 - [pytorch-ls-dqn](#pytorch-ls-dqn)
