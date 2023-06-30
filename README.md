@@ -76,7 +76,7 @@ All audio is distributed in 320kbps MP3 format. The audio files are split into f
 The script to download and validate all files in the dataset. See its help message for more information:
 
 ```bash
-python scripts/download/download.py -h
+python download.py -h
 ```
 ```
 usage: download.py [-h] [--dataset {raw_30s,autotagging_moodtheme}]
@@ -109,7 +109,7 @@ For example: to download audio for the `autotagging_moodtheme.tsv` subset, unpac
 
 ```
 mkdir /path/to/download
-python3 scripts/download/download.py --dataset autotagging_moodtheme --type audio /path/to/download --unpack --remove
+python3 download.py --dataset autotagging_moodtheme --type audio /path/to/download --unpack --remove
 ```
 
 
@@ -118,28 +118,26 @@ Unpacking process is run after tar archive downloads are complete and validated.
 Due to the large size of the dataset, it can be useful to include the `--remove` flag to save disk space: in this case, tar archive are unpacked and immediately removed one by one.
 
 
-## Training
+## Running the Network
 
-Examples:
+To run the network:
+First run the splitter with chosen time length: 
+```bash
+python music_split.py -h
+```
 
-* `python ls_dqn_main.py --train --lsdqn -e boxing -l 10 -b 64`
-* `python ls_dqn_main.py --train --lsdqn --boosting --dueling -m -e boxing -l 1000 -b 64`
-
-For full description of the flags, see the full API.
-
-## Playing Atari on Windows
-
-You can train and play on a Windows machine, thanks to Nikita Kniazev, as follows from this post on [stackoverflow](https://stackoverflow.com/questions/42605769/openai-gym-atari-on-windows/46739299):
-
-`pip install --no-index -f https://github.com/Kojoley/atari-py/releases atari_py` 
-
-## TensorBoard
-
-TensorBoard logs are written dynamically during the runs, and it possible to observe the training progress using the graphs. In order to open TensoBoard, navigate to the source directory of the project and in the terminal/cmd:
-
-`tensorboard --logdir=./runs`
-
-* make sure you have the correct environment activated (`conda activate env-name`) and that you have `tensorboard`, `tensorboardX` installed.
+Transform all songs to Mono from Stereo:
+```bash
+python Stereo_to_mono_trans.py -h
+```
+Split data to train, val and test:
+```bash
+python create_dataset_files.py -h
+```
+Run the Network:
+```bash
+python Deep_Network.py -h
+```
 
 ## References
 * [PyTorch Agent Net: reinforcement learning toolkit for pytorch](https://github.com/Shmuma/ptan) by [Max Lapan](https://github.com/Shmuma)
