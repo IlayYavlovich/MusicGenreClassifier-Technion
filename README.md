@@ -17,7 +17,8 @@ Based on the work:
 Minz Won, Janne Spijkervet, Keunwoo Choi [Music Classification: Beyond Supervised Learning, Towards Real-world Applications](https://music-classification.github.io/tutorial/landing-page.html), 2021
 
 [Automatic Music Genre Classification](https://github.com/IlayYavlovich/046211-MusicGenreClassifier.git) - https://github.com/IlayYavlovich/046211-MusicGenreClassifier.git
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!chnge at the end
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!change at the end
 - [pytorch-ls-dqn](#pytorch-ls-dqn)
   * [Background](#background)
   * [Prerequisites](#prerequisites)
