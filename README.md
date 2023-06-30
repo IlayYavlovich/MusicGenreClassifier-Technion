@@ -48,16 +48,19 @@ In our project we aimed to develop a deep learning network that will classify so
 
 |File name         | Purpsoe |
 |----------------------|------|
-|`ls_dqn_main.py`| general purpose main application for training/playing a LS-DQN agent|
-|`pong_ls_dqn.py`| main application tailored for Atari's Pong|
-|`boxing_ls_dqn.py`| main application tailored for Atari's Boxing|
-|`dqn_play.py`| sample code for playing a game, also in `ls_dqn_main.py`|
-|`actions.py`| classes for actions selection (argmax, epsilon greedy)|
-|`agent.py`| agent class, holds the network, action selector and current state|
+|`images`| images of the network build and chosen results|
+|`songs_split_txt`| an example of how how the Train/Val/Test split should look like|
+|`DL music genre classifier.pptx`| pptx Presentaion of the network|
+|`Deep_Network.py`| code for the network|
+|`Stereo_to_mono_trans.py`| python code for transforming Stereo to Mono|
+|`best_model.ckpt`| example of a trained model|
 |`dqn_model.py`| DQN classes, neural networks structures|
-|`experience.py`| Replay Buffer classes|
-|`hyperparameters.py`| hyperparameters for several Atari games, used as a baseline|
-|`srl_algorithms.py`| Shallow RL algorithms, LS-UPDATE|
+|`create_dataset_files.py`| python code for spltting data Train/Val/Test|
+|`download_MTG_Jamendo.py`| code to download the MTG-Jamendo Dataset|
+|`music_split.py`|python code for splitting the songs to chosen time samples|
+
+
+
 |`utils.py`| utility functions|
 |`wrappers.py`| DeepMind's wrappers for the Atari environments|
 |`*.pth`| Checkpoint files for the Agents (playing/continual learning)|
