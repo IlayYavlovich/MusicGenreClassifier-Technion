@@ -56,14 +56,7 @@ In our project we aimed to develop a deep learning network that will classify so
 |`create_dataset_files.py`| python code for spltting data Train/Val/Test|
 |`download_MTG_Jamendo.py`| code to download the MTG-Jamendo Dataset|
 |`music_split.py`|python code for splitting the songs to chosen time samples|
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!change at the end!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-|`utils.py`| utility functions|
-|`wrappers.py`| DeepMind's wrappers for the Atari environments|
-|`*.pth`| Checkpoint files for the Agents (playing/continual learning)|
-|`Deep_RL_Shallow_Updates_for_Deep_Reinforcement_Learning.pdf`| Writeup - theory and results|
-
+|`Project report.pdf`| project report of our network|
 
 ## Downloading the data
 ```diff
