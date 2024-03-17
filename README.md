@@ -1,7 +1,7 @@
 # Automatic Music Genre Classification
 <h1 align="center">
   <br>
-
+    Automatic Music Genre Classification
   <br>
   <img src="https://raw.githubusercontent.com/taldatech/ee046211-deep-learning/main/assets/nn_gumgum.gif" height="200">
 </h1>
@@ -10,7 +10,7 @@
     <a href="https://github.com/KarpAmit">Amit Karp</a>
   </p>
 
-Our Project for the Technion's EE 046211 course "Deep Learning"
+Our Project for Automatic Music Genre Classification
 
 Based on the work:
 
