@@ -1,7 +1,7 @@
 # Automatic Music Genre Classification
 <h1 align="center">
   <br>
-Technion EE 046211 - Deep Learning
+
   <br>
   <img src="https://raw.githubusercontent.com/taldatech/ee046211-deep-learning/main/assets/nn_gumgum.gif" height="200">
 </h1>
